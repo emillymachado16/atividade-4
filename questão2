@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main()
+{
+    int vet[10], i, j;
+    
+    printf("Informe 10 valores: ");
+    for(i = 0; i < 10; i++){
+        scanf("%i", &vet[i]);
+        for(j=0;j<i;j++){
+        if(vet[i]==vet[j]){
+            printf("Informe outro valor: ");
+            i--;
+        }
+        }
+    }
+    
+    printf("\nVetor final: ");
+    for(i=0;i<10;i++){
+		printf("%i, ", vet[i]);
+	}
+
+    return 0;
+}
