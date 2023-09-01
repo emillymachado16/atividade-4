@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+    int vetor[10], aux, j, k, i;
+    printf("Digite 10 valores do vetor: \n") ;
+    for(i = 0; i < 10; i++){
+       scanf("%i", &vetor[i]);
+       vetor[i] = vetor[i];
+    }
+    for(j = 0; j < 10; j++){
+        for(int k = j; k <10; k++){
+            if(vetor[j] > vetor[k]){
+                aux = vetor[j];
+                vetor[j] = vetor[k];
+                vetor[k] = aux;
+        }
+        }
+    }
+    
+   printf("\nVetor ordenado: ");
+    for(i = 0; i < 10; i++){
+        printf(" %i, ", vetor[i]);
+    }
+  
+    return 0;
+}
